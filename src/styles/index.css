@@ -12,25 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-/* .box {
-  background-color: #e8e8e8;
-  padding: 40px;
-  margin-top: 50px;
-}
-
-.button {
-  cursor: pointer;
-  margin-right: 20px;
-  text-decoration: none;
-  opacity: 0.5;
-  color: #0167b3;
-}
-
-.button.active {
-  text-decoration: underline;
-}
-
-.button.disabled {
-  opacity: 1;
-} */
