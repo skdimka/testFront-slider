@@ -1,26 +1,29 @@
 $primaryColor: #0167b3;
 $backgroundColor: #e8e8e8;
-$sliderColor: #edf1f9;
+$sliderColor: #edf1f8;
 $trackAndThumbColor: #5cadea;
-$valueLabelBackgroundColor: white;
-$valueLabelTextColor: $trackAndThumbColor;
+$markscolor: #999999;
+$valueLabelBackgroundColor: #ffffff;
 $valueLabelBoxShadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 
-.slider-container {
+.container {
   display: flex;
+  background-color: $backgroundColor;
+  padding: 45px;
+  margin-top: 50px;
   flex-direction: row;
+}
+
+.slider-container {
+  flex-direction: row;
+  min-width: 90%;
+  margin-bottom: 10px;
 }
 
 .buttons-container {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
-}
-
-.box {
-  background-color: $backgroundColor;
-  padding: 40px;
-  margin-top: 50px;
 }
 
 .button {
@@ -42,17 +45,19 @@ $valueLabelBoxShadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .custom-slider {
-  color: $sliderColor;
-  height: 10px;
-
   .MuiSlider-track {
     background-color: $trackAndThumbColor;
+    height: 7px;
+  }
+  .MuiSlider-rail {
+    background-color: $sliderColor;
+    height: 10px;
   }
 
   .MuiSlider-thumb {
     height: 24px;
     width: 24px;
-    background-color: #fff;
+    background-color: $valueLabelBackgroundColor;
     border: 5px solid $trackAndThumbColor;
   }
 
@@ -61,11 +66,41 @@ $valueLabelBoxShadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     padding: 10px;
     border-radius: 7px;
     background-color: $valueLabelBackgroundColor;
-    color: $valueLabelTextColor;
+    color: $trackAndThumbColor;
     font-size: 18px;
     font-family: "Raleway, sans-serif";
     white-space: pre-wrap;
     text-align: center;
     box-shadow: $valueLabelBoxShadow;
+  }
+  .MuiSlider-markLabel {
+    color: $markscolor;
+    text-align: "center";
+  }
+}
+
+.text-diapazon {
+  display: none;
+  color: $trackAndThumbColor;
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .slider-container {
+    min-width: 98%;
+  }
+  .buttons-container {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .marks {
+    display: none;
+  }
+  .text-diapazon {
+    display: block;
   }
 }
