@@ -1,6 +1,4 @@
-import React from "react";
 import MySlider from "./components/MySlider";
-
 
 // В задании не требуется выводить на экране форму для ввода данных, поэтому
 // задаем данные для передачи в компонент слайдера здесь
@@ -9,17 +7,15 @@ const maxDate = { month: 1, year: 2021 };
 const selectedStartDate = { month: 5, year: 2015 };
 const selectedEndDate = { month: 2, year: 2016 };
 
-// Передаю данные в компонент App в качестве пропсов
+// Передаю данные в компонент MySlider в качестве пропсов
 const App = () => {
   return (
-    <div className="box">
     <MySlider 
       minDate={minDate}
       maxDate={maxDate}
       selectedStartDate={selectedStartDate}
       selectedEndDate={selectedEndDate}
       />
-      </div>
   );
 };
 
