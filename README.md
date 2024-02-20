@@ -4,4 +4,4 @@
 <br/>
 /npm start
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cabaccde-b40e-4183-b8bc-1037dc7c679c/deploy-status)](https://app.netlify.com/sites/test-front-slider/deploys)
