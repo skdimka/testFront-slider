@@ -1,0 +1,71 @@
+$primaryColor: #0167b3;
+$backgroundColor: #e8e8e8;
+$sliderColor: #edf1f9;
+$trackAndThumbColor: #5cadea;
+$valueLabelBackgroundColor: white;
+$valueLabelTextColor: $trackAndThumbColor;
+$valueLabelBoxShadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+
+.slider-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.box {
+  background-color: $backgroundColor;
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.button {
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  opacity: 0.5;
+  white-space: nowrap;
+  color: $primaryColor;
+
+  &.active {
+    text-decoration: underline;
+  }
+
+  &.disabled {
+    opacity: 1;
+  }
+}
+
+.custom-slider {
+  color: $sliderColor;
+  height: 10px;
+
+  .MuiSlider-track {
+    background-color: $trackAndThumbColor;
+  }
+
+  .MuiSlider-thumb {
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border: 5px solid $trackAndThumbColor;
+  }
+
+  .MuiSlider-valueLabel {
+    transform: translate(0, -110%);
+    padding: 10px;
+    border-radius: 7px;
+    background-color: $valueLabelBackgroundColor;
+    color: $valueLabelTextColor;
+    font-size: 18px;
+    font-family: "Raleway, sans-serif";
+    white-space: pre-wrap;
+    text-align: center;
+    box-shadow: $valueLabelBoxShadow;
+  }
+}
