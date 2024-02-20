@@ -23,8 +23,8 @@ const MySlider: React.FC<MySliderProps> = ({
   
 
   // Массив месяцев для вывода в тултипах и метках(marks)
-  const monthsFullName = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь" ];
-  const months = monthsFullName.map((month) => month.substring(0,3));
+  const monthsFullName = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ];
+  const months = monthsFullName.map((month) => month.substring(0,3).toLowerCase());
   const monthsQuarter = months.map((month, index) => index % 3 === 0 || index === 0 ? month : "");
 
   // Подпись в тултипах
